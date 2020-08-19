@@ -24,6 +24,6 @@ Clocks in around 1250ms. I'd initially seen a wider range in performance based o
 
 ## PHP
 
-Alas, this is a worst case for PHP 7.3. It may or may not do better with PHP 8's JIT compiler mode, I haven't tested it yet.
+Alas, this is a worst case for PHP 7.3; clocks in around 70 seconds, 56x slower than node.
 
-Clocks in around 60 seconds, 50x slower than node.
+PHP 8's JIT compiler, once enabled, can knock it down to about 40 seconds, a mere 32x slower than node. ;)
