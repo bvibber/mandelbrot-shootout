@@ -31,3 +31,9 @@ Clocks in around 1250ms. I'd initially seen a wider range in performance based o
 Alas, this is a worst case for PHP 7.3; clocks in around 70 seconds, 56x slower than node.
 
 PHP 8's JIT compiler, once enabled, can knock it down to about 40 seconds, a mere 32x slower than node. ;)
+
+## Python
+
+Python (in its traditional CPython form, tested 3.8.5) fares even worse, at about 8 minutes 45 seconds. This is about 7.5x slower than PHP 7.3 and a blazing 420x slower than C, JS, and Java.
+
+Other JIT-optimized implementations of Python may fare better.
