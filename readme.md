@@ -36,4 +36,4 @@ PHP 8's JIT compiler, once enabled, can knock it down to about 40 seconds, a mer
 
 Python (in its traditional CPython form, tested 3.8.5) fares even worse, at about 8 minutes 45 seconds. This is about 7.5x slower than PHP 7.3 and a blazing 420x slower than C, JS, and Java.
 
-Other JIT-optimized implementations of Python may fare better.
+JIT-optimized implementations of Python fare better: GraalPython gives me about 3600ms, with a visible warm-up window near the start. This is only about 3x slower than the most optimized other language implementations.
