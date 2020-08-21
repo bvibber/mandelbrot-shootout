@@ -10,15 +10,19 @@ A bare-bones `Complex` object class is used to implement the math, representing 
 
 Most of the runtime is in the iteration loop for the points inside the set.
 
+## C
+
+As a theoretically superfast baseline, C code is included using structs, with variants using heap allocation, stack allocation, and value objects. All run about the same when compiled at `-O3` in `clang`, clocking in just under 1250ms.
+
 ## JavaScript
 
 JavaScript does pretty well here running in `node`, optimizing the accesses to the `Complex` object type nicely.
 
-On my machine this clocks in around 1250ms.
+On my machine this clocks in around 1250ms, about the same as the statically optimized C code.
 
 ## Java
 
-Java performs similarly to JavaScript here, but the JIT compiler probably has less work to do to get there!
+Java performs similarly to C and JavaScript here, but the JIT compiler probably has less work to do to get there!
 
 Clocks in around 1250ms. I'd initially seen a wider range in performance based on use of the `final` keyword but can no longer reproduce it, it may have been background activity on the machine.
 
